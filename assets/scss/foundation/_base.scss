@@ -1,0 +1,53 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: $color-txt-brown;
+  background-color: $color-bg-body;
+  font-size: $font-size;
+  font-family: $font-jp;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  -webkit-text-size-adjust: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+body.is-active-menu {
+  overflow: hidden;
+}
+
+/* テーマチェック対策 */
+.wp-caption {
+  position: static;
+}
+
+.wp-caption-text {
+  position: static;
+}
+
+.sticky {
+  position: static;
+}
+
+.gallery-caption {
+  position: static;
+}
+
+.bypostauthor {
+  position: static;
+}
+
+.alignright {
+  position: static;
+}
+
+.alignleft {
+  position: static;
+}

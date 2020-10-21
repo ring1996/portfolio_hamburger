@@ -1,0 +1,17 @@
+.l-under-content {
+  padding: 30px 20px;
+}
+
+@include media(min, sm) {
+  .l-under-content {
+    padding: 36px 40px;
+  }
+}
+
+@include media(min, md) {
+  .l-under-content {
+    width: 87.1217%;
+    margin: 0 auto;
+    padding: 60px 0 64px;
+  }
+}

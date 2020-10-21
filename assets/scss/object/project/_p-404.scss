@@ -1,0 +1,10 @@
+.p-404 {
+  padding: 20px;
+  min-height: 70vh;
+}
+
+@include media(min, md) {
+  .p-404 {
+    padding: 67px 30px 66px 65px;
+  }
+}

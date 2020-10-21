@@ -1,0 +1,265 @@
+.pagination {
+  margin-top: 60px;
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .page-numbers {
+    display: none;
+  }
+  .prev {
+    @include hover-normal;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    color: $color-txt-brown;
+    white-space: nowrap;
+    &::before {
+      content: "";
+      display: block;
+      background-image: url("../images/common/common_ico_prev-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: left center;
+      width: 24px;
+      height: 24px;
+      margin-right: 4px;
+    }
+  }
+  .next {
+    @include hover-normal;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    color: $color-txt-brown;
+    white-space: nowrap;
+    &::after {
+      content: "";
+      display: block;
+      background-image: url("../images/common/common_ico_next-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: right center;
+      width: 24px;
+      height: 24px;
+      margin-left: 4px;
+    }
+  }
+}
+
+@include media(min, sm) {
+  .pagination {
+    margin-top: 60px;
+    .nav-links {
+      justify-content: center;
+    }
+    .current-number {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-right: 20px;
+      color: $color-txt-gray;
+    }
+    .page-numbers {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $color-bg-gray;
+      width: 35px;
+      height: 35px;
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: $color-txt-gray;
+      background-color: $color-bg-white;
+      text-align: center;
+      transition-property: color, background-color;
+      transition-timing-function: ease-out;
+      transition-duration: .3s;
+      &:hover {
+        background-color: $color-bg-brown2;
+        color: $color-txt-white;
+      }
+      + .page-numbers {
+        margin-left: 15px;
+      }
+      &.current {
+        pointer-events: none;
+        background-color: $color-bg-brown2;
+        color: $color-txt-white;
+      }
+      &.dots {
+        border: none;
+        &:hover {
+          background-color: transparent;
+          color: $color-txt-gray;
+        }
+      }
+    }
+    .prev {
+      border: none;
+      transition: opacity ease-out 0.3s;
+      .prev_text {
+        // u-screen-reader-text
+        position: absolute;
+        overflow: hidden;
+        width: 1px;
+        height: 1px;
+        clip: rect(1px, 1px, 1px, 1px);
+      }
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    .next {
+      margin-left: 15px;
+      border: none;
+      transition: opacity ease-out 0.3s;
+      .next_text {
+        // u-screen-reader-text
+        position: absolute;
+        overflow: hidden;
+        width: 1px;
+        height: 1px;
+        clip: rect(1px, 1px, 1px, 1px);
+      }
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+// .p-pagenation {
+//   margin-top: 60px;
+//   &__number {
+//     display: none;
+//   }
+//   &__list {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//   }
+//   &__item {
+//     display: none;
+//   }
+//   &__prev {
+//     a {
+//       @include hover-normal;
+//       text-decoration: none;
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       &::before {
+//         content: "";
+//         display: block;
+//         background-image: url(/assets/images/common/common_ico_prev-arrow.svg);
+//         background-repeat: no-repeat;
+//         background-position: left center;
+//         width: 24px;
+//         height: 24px;
+//       }
+//       &::after {
+//         content: "前へ";
+//         font-size: 1.6rem;
+//         color: $color-txt-brown;
+//         white-space: nowrap;
+//       }
+//     }
+//   }
+//   &__next {
+//     a {
+//       @include hover-normal;
+//       text-decoration: none;
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       &::before {
+//         content: "次へ";
+//         font-size: 1.6rem;
+//         color: $color-txt-brown;
+//         white-space: nowrap;
+//       }
+//       &::after {
+//         content: "";
+//         display: block;
+//         background-image: url(/assets/images/common/common_ico_next-arrow.svg);
+//         background-repeat: no-repeat;
+//         background-position: right center;
+//         width: 24px;
+//         height: 24px;
+//       }
+//     }
+//   }
+// }
+
+// @include media(min, sm) {
+//   .p-pagenation {
+//     margin-top: 60px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     &__number {
+//       display: block;
+//       font-size: 1.6rem;
+//       font-weight: 700;
+//       margin-right: 20px;
+//     }
+//     &__list {
+//       justify-content: center;
+//     }
+//     &__item {
+//       display: block;
+//       + .p-pagenation__item {
+//         margin-left: 15px;
+//       }
+//       a {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         border: 1px solid $color-bg-gray;
+//         width: 35px;
+//         height: 35px;
+//         font-size: 1.6rem;
+//         font-weight: 700;
+//         text-decoration: none;
+//         color: $color-txt-gray;
+//         background-color: $color-bg-white;
+//         text-align: center;
+//         transition-property: color, background-color;
+//         transition-timing-function: ease-out;
+//         transition-duration: .3s;
+//         &:hover {
+//           background-color: $color-bg-brown2;
+//           color: $color-txt-white;
+//         }
+//       }
+//       &--current {
+//         a {
+//           pointer-events: none;
+//           background-color: $color-bg-brown2;
+//           color: $color-txt-white;
+//         }
+//       }
+//     }
+//     &__prev {
+//       a {
+//         margin-right: 15px;
+//         &::after {
+//           content: none;
+//         }
+//       }
+//     }
+//     &__next {
+//       a {
+//         margin-left: 15px;
+//         &::before {
+//           content: none;
+//         }
+//       }
+//     }
+//   }
+// }

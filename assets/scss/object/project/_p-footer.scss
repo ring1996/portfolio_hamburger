@@ -1,0 +1,35 @@
+.p-footer {
+  padding: 40px 0 30px;
+  &__nav {
+    ul {
+      display: flex;
+      justify-content: center;
+    }
+    li {
+      + li {
+        &::before {
+          content: "|";
+          color: $color-txt-white;
+          font-size: 2rem;
+          padding: 0 12px;
+        }
+      }
+      a {
+        @include hover-normal;
+        font-size: 2rem;
+        color: $color-txt-white;
+        text-decoration: none;
+      }
+    }
+  }
+  &__copy-right {
+    color: $color-txt-white;
+    text-align: center;
+    margin-top: 34px;
+    a {
+      @include hover-normal;
+      text-decoration: none;
+      color: $color-txt-white;
+    }
+  }
+}

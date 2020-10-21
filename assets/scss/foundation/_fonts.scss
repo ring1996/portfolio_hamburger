@@ -1,0 +1,39 @@
+/* mplus-1m 400 */
+@font-face {
+  font-family: "mplus-1m";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/mplus-1m/Regular/mplus-1m-regular.woff2") format("woff2"),
+       url("../fonts/mplus-1m/Regular/mplus-1m-regular.woff") format("woff"),
+       url("../fonts/mplus-1m/Regular/mplus-1m-regular.eot") format("eot");
+}
+
+/* mplus-1m 700 */
+@font-face {
+  font-family: "mplus-1m";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/mplus-1m/Bold/mplus-1m-bold.woff2") format("woff2"),
+       url("../fonts/mplus-1m/Bold/mplus-1m-bold.woff") format("woff"),
+       url("../fonts/mplus-1m/Bold/mplus-1m-bold.eot") format("eot");
+}
+
+/* Roboto 400 */
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Roboto/Regular/Roboto-Regular.woff2") format("woff2"),
+       url("../fonts/Roboto/Regular/Roboto-Regular.woff") format("woff"),
+       url("../fonts/Roboto/Regular/Roboto-Regular.eot") format("eot");
+}
+
+/* Roboto 700 */
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/Roboto/Bold/Roboto-Bold.woff2") format("woff2"),
+       url("../fonts/Roboto/Bold/Roboto-Bold.woff") format("woff"),
+       url("../fonts/Roboto/Bold/Roboto-Bold.eot") format("eot");
+}

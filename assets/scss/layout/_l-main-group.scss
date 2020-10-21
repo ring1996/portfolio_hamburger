@@ -1,0 +1,17 @@
+.l-main-group {
+  padding: 20px 20px 50px;
+}
+
+@include media(min, sm) {
+  .l-main-group {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@include media(min, md) {
+  .l-main-group {
+    padding: 120px 0 134px;
+  }
+}

@@ -1,0 +1,9 @@
+.l-main-area {
+  width: 100%;
+}
+
+@include media(min, md) {
+  .l-main-area {
+    width: 80.88542%;
+  }
+}

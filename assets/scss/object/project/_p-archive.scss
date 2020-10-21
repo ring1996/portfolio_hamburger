@@ -1,0 +1,17 @@
+.p-archive {
+  &__ttl {
+    font-size: 2.8rem;
+  }
+  &__txt {
+    font-size: 1.6rem;
+    margin-top: 25px;
+  }
+}
+
+@include media(min, sm) {
+  .p-archive {
+    &__ttl {
+      font-size: 3.6rem;
+    }
+  }
+}

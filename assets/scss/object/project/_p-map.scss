@@ -1,0 +1,72 @@
+.p-map {
+  background-image: url("../images/top/top_map.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  &__black-filter {
+    background-color: rgba(0, 0, 0, .4);
+    height: 691px;
+  }
+  &__inner {
+    height: 50%;
+    background-color: rgba(0, 0, 0, .4);
+    padding: 40px 40px 51px 50px;
+    color: $color-txt-white;
+    &__ttl {
+      font-size: 3rem;
+      font-weight: 700;
+      &::after {
+        content: "";
+        display: block;
+        width: 75px;
+        height: 2px;
+        background-color: $color-bg-white;
+        margin-top: 20px;
+      }
+    }
+    &__txt {
+      max-height: 518px;
+      margin-top: 20px;
+      font-size: 1.4rem;
+      line-height: 2.35;
+      overflow: auto;
+    }
+  }
+}
+
+@include media(min, sm) {
+  .p-map {
+    &__black-filter {
+      height: 415px;
+    }
+    &__inner {
+      height: 100%;
+      padding: 40px 40px 30px 40px;
+      &__txt {
+        max-height: none;
+        overflow: visible;
+      }
+    }
+  }
+}
+
+@include media(min, md) {
+  .p-map {
+    &__black-filter {
+      height: auto;
+    }
+    &__inner {
+      height: auto;
+      width: 61.17193%;
+      padding: 5.3445% 8.6285% 4.50741% 7.66259%;
+      &__ttl {
+        &::after {
+          margin-top: 56px;
+        }
+      }
+      &__txt {
+        font-size: 1.6rem;
+        margin-top: 64px;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+// responsive
+@mixin media($type, $bp1, $bp2:0) {
+	@if ($type == min) {
+		@media screen and (min-width: #{map-get($breakpoints, $bp1)}) {
+			@content;
+		}
+	} @else if ($type == max) {
+		@media screen and (max-width: #{map-get($breakpoints, $bp1)}) {
+			@content;
+		}
+	} @else if ($type == between) {
+		@media screen and (min-width: #{map-get($breakpoints, $bp1)}) and (max-width: #{map-get($breakpoints, $bp2)}) {
+			@content;
+		}
+	}
+}
+
+// btn-reset
+@mixin btn-reset {
+	border: none;
+	background-image: none;
+	cursor: pointer;
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		outline: none;
+	}
+}
+
+// hover-normal
+@mixin hover-normal {
+	transition: opacity ease-out 0.3s;
+	&:hover {
+		opacity: 0.7;
+	}
+}
